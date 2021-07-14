@@ -1,0 +1,45 @@
+<!DOCTYPE html> <html> <head> <style type="text/css"> </style> </head>
+
+<body>
+        <p class="www">Даны абзацы и кнопка.</p>
+        <p class="www">По нажатию на кнопку найдите все абзацы,</p>
+        <p class="www">переберите из циклом</p>
+        <p class="www">и установите текст каждого абзаца в значение text.</p>
+        <input id='button' type='submit' value='обработать все абзацы'>
+
+        <p class="www2">Даны абзацы и кнопка.</p>
+        <p class="www2">По нажатию на кнопку</p>
+        <p class="www2">запишите в конец текста каждого абзаца</p>
+        <p class="www2">его порядковый номер.</p>
+        <input id='button2' type='submit' value='выведи порядковый номер'>
+
+        <p>Даны инпуты с числами, абзац и кнопка. По нажатию на кнопку найдите сумму чисел из инпутов и запишите эту сумму в текст абзаца.</p>
+
+        <input class="www3" id='elem21', value="10";>
+        <input class="www3" id='elem22', value="20";>
+        <input class="www3" id='elem23', value="30";>
+        <input id='button3' type='submit' value='посчитай сумму и запиши в абзац'>
+        <p id="elem5">Тутова должно появиться значение</p>
+</body>
+
+<script>
+                let elems = document.querySelectorAll('.www');
+                let button = document.querySelector('#button');
+                button.addEventListener('click', function() { for (let elem of elems) { elem.innerHTML = 'text'; } });
+
+                let elems2 = document.querySelectorAll('.www2');
+                let button2 = document.querySelector('#button2');
+                button2.addEventListener('click', function() { let i=1; for (let elem of elems2) {elem.innerHTML = elem.innerHTML+i; i++;} });
+
+                let elems3 = document.querySelectorAll('.www3');
+                let button3 = document.querySelector('#button3');
+                button3.addEventListener('click', function() { let s=0; for (let elem of elems3) {s+=parseInt(elem.value); elem5.innerHTML=s;}});
+
+</script>
+
+</html>
+
+
+
+
+
